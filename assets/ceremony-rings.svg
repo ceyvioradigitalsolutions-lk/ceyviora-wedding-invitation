@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="256" viewBox="0 0 320 256" fill="none" role="img" aria-label="Two interlocking golden wedding rings">
+<defs>
+  <linearGradient id="outer" x1="26" y1="65" x2="286" y2="211" gradientUnits="userSpaceOnUse"><stop stop-color="#FFEEBA"/><stop offset="0.19" stop-color="#C48734"/><stop offset="0.40" stop-color="#FFF8D2"/><stop offset="0.66" stop-color="#BE7B26"/><stop offset="0.84" stop-color="#F6D890"/><stop offset="1" stop-color="#9A5B25"/></linearGradient>
+  <linearGradient id="inner" x1="89" y1="83" x2="227" y2="185" gradientUnits="userSpaceOnUse"><stop stop-color="#8E531E"/><stop offset=".42" stop-color="#E9B963"/><stop offset=".74" stop-color="#FFFFFF"/><stop offset="1" stop-color="#A96B29"/></linearGradient>
+  <radialGradient id="light"><stop stop-color="#FFF9DD" stop-opacity=".96"/><stop offset=".54" stop-color="#FFDC9F" stop-opacity=".43"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-25%" y="-25%" width="150%" height="165%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="sparkle" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<ellipse cx="160" cy="168" rx="144" ry="67" fill="url(#light)" opacity=".6"/>
+<ellipse cx="155" cy="193" rx="112" ry="19" fill="#925C6A" opacity=".16" filter="url(#shadow)"/>
+<g transform="rotate(-16 130 142)"><ellipse cx="130" cy="143" rx="72" ry="57" stroke="#9C5F26" stroke-opacity=".35" stroke-width="22" transform="translate(0 3)"/><ellipse cx="130" cy="143" rx="72" ry="57" stroke="url(#outer)" stroke-width="20"/><ellipse cx="130" cy="143" rx="59" ry="45" stroke="url(#inner)" stroke-width="2.2" opacity=".92"/><path d="M66 126C89 80 164 72 193 115" stroke="#FFF7CE" stroke-width="5" stroke-linecap="round" opacity=".94"/></g>
+<g transform="rotate(15 195 133)"><ellipse cx="195" cy="138" rx="72" ry="57" stroke="#8F592C" stroke-opacity=".26" stroke-width="23" transform="translate(0 3)"/><ellipse cx="195" cy="133" rx="72" ry="57" stroke="url(#outer)" stroke-width="20"/><ellipse cx="195" cy="133" rx="59" ry="45" stroke="url(#inner)" stroke-width="2.2"/><path d="M140 108C161 65 230 72 254 109" stroke="#FFF9DA" stroke-width="5" stroke-linecap="round" opacity=".86"/></g>
+<path d="M218 52l5.5 11.5L235 69l-11.5 5.5L218 86l-5.5-11.5L201 69l11.5-5.5L218 52Z" fill="#FFE6A0"/><path d="M74 50l4 8.5 8.5 4L78 66.5 74 75l-4-8.5-8.5-4 8.5-4L74 50Z" fill="#FFE6A0" opacity=".9"/><circle cx="276" cy="157" r="3" fill="#FFF8DA"/><circle cx="55" cy="190" r="2.5" fill="#FFF4CB"/>
+</svg>

@@ -1,0 +1,93 @@
+/* STEP 12 — HAND-MATCHING REUNION
+   Both PNG files must share the same transparent 1714×918 canvas.
+   JavaScript measures the hand edges and sets --union-groom-x / --union-bride-x.
+   The CSS fallback shifts below apply if browsers restrict canvas pixel reading.
+*/
+.story-union-section .union-stage {max-width:1440px;}
+.story-union-section .union-scene{
+  isolation:isolate;
+  overflow:hidden;
+}
+.story-union-section .union-person{
+  left:50%;right:auto;
+  width:100%;max-width:none;height:auto;
+  object-fit:contain;
+  object-position:center bottom;
+  opacity:0;
+  /* Resolved from alpha-image edge detection. These defaults match user screenshots. */
+  --union-groom-x:clamp(31px,6.7vw,95px);
+  --union-bride-x:calc(-1 * clamp(47px,10vw,125px));
+  --union-groom-y:0px;
+  --union-bride-y:0px;
+}
+.story-union-section.will-unite .union-groom{
+  opacity:0;
+  transform:translate3d(calc(-50% + var(--union-groom-x) - 115vw), var(--union-groom-y), 0);
+}
+.story-union-section.will-unite .union-bride{
+  opacity:0;
+  transform:translate3d(calc(-50% + var(--union-bride-x) + 115vw), var(--union-bride-y), 0);
+}
+.story-union-section.will-unite.is-united .union-groom,
+.story-union-section:not(.will-unite) .union-groom{
+  opacity:1;
+  transform:translate3d(calc(-50% + var(--union-groom-x)),var(--union-groom-y),0);
+}
+.story-union-section.will-unite.is-united .union-bride,
+.story-union-section:not(.will-unite) .union-bride{
+  opacity:1;
+  transform:translate3d(calc(-50% + var(--union-bride-x)),var(--union-bride-y),0);
+}
+.story-union-section.will-unite.is-united .union-person{
+  transition:transform 1850ms cubic-bezier(.16,.78,.2,1),opacity 450ms ease-out;
+}
+.story-union-section .union-join-ring,
+.story-union-section .union-touch-glow,
+.story-union-section .union-heart{
+  left:50%;
+  /* Glow ring can follow the actual detected hand height. */
+  bottom:var(--union-contact-bottom,17%);
+}
+.story-union-section .union-join-ring{
+  margin-bottom:-20px;
+  width:110px;height:74px;
+}
+.story-union-section .union-touch-glow{margin-bottom:-25px;}
+.story-union-section .union-heart{margin-bottom:14px;}
+.story-union-section .union-copy{z-index:7}
+.story-union-section .union-endnote{z-index:7}
+@media(max-width:700px){
+  .story-union-section .union-stage{min-height:625px}
+  .story-union-section .union-scene{height:290px;bottom:12px}
+  .story-union-section .union-person{width:calc(100vw + 112px)}
+  .story-union-section .union-join-ring{width:66px;height:46px;margin-bottom:-11px}
+  .story-union-section .union-touch-glow{width:72px;height:52px;margin-bottom:-15px}
+  .story-union-section .union-heart{font-size:17px;margin-bottom:10px}
+  .story-union-section .union-endnote{
+    position:relative;font-size:9px;padding:12px 18px 24px;
+    line-height:1.5;letter-spacing:.14em;
+  }
+}
+@media(max-width:390px){
+  .story-union-section .union-stage{min-height:600px}
+  .story-union-section .union-scene{height:280px;bottom:9px}
+  .story-union-section .union-copy{padding-top:38px}
+}
+@media(max-width:340px){
+  .story-union-section .union-stage{min-height:600px}
+  .story-union-section .union-scene{height:270px}
+}
+@media(prefers-reduced-motion:reduce){
+  .story-union-section.will-unite .union-groom,
+  .story-union-section.will-unite .union-bride,
+  .story-union-section.will-unite.is-united .union-groom,
+  .story-union-section.will-unite.is-united .union-bride{
+    opacity:1!important;transition:none!important;
+  }
+  .story-union-section.will-unite .union-groom{
+    transform:translate3d(calc(-50% + var(--union-groom-x)),var(--union-groom-y),0)!important;
+  }
+  .story-union-section.will-unite .union-bride{
+    transform:translate3d(calc(-50% + var(--union-bride-x)),var(--union-bride-y),0)!important;
+  }
+}

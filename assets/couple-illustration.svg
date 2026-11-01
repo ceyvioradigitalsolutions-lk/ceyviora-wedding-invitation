@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 850" role="img" aria-label="Illustrated couple under a floral arch">
+<defs>
+ <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f2d7d7"/><stop offset=".55" stop-color="#f8e7df"/><stop offset="1" stop-color="#d9b6b1"/></linearGradient>
+ <radialGradient id="sun" cx="50%" cy="43%" r="40%"><stop offset="0" stop-color="#fff9df" stop-opacity=".9"/><stop offset="1" stop-color="#fbead0" stop-opacity="0"/></radialGradient>
+ <linearGradient id="dress" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffbf3"/><stop offset="1" stop-color="#edd9d5"/></linearGradient>
+ <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#796d74"/><stop offset="1" stop-color="#3b3542"/></linearGradient>
+</defs>
+<rect width="650" height="850" fill="url(#sky)"/>
+<rect width="650" height="850" fill="url(#sun)"/>
+<path d="M0 585Q130 540 260 600T650 570V850H0" fill="#e7c5ba" opacity=".55"/>
+<path d="M0 680Q145 628 300 696T650 675V850H0" fill="#a89a9d" opacity=".14"/>
+<g fill="none" stroke="#887d67" stroke-width="6" opacity=".7"><path d="M15 855V210Q15 47 330 44Q637 53 635 220V855"/></g>
+<g stroke="#7c8b70" stroke-linecap="round" fill="none" opacity=".88"><path d="M20 660Q5 450 80 280Q135 160 248 118" stroke-width="6"/><path d="M632 654Q651 453 573 272Q507 146 397 107" stroke-width="6"/></g>
+<g fill="#8a9a80" opacity=".73">
+<ellipse cx="56" cy="447" rx="24" ry="57" transform="rotate(-32 56 447)"/><ellipse cx="95" cy="324" rx="21" ry="52" transform="rotate(48 95 324)"/><ellipse cx="166" cy="180" rx="18" ry="47" transform="rotate(44 166 180)"/><ellipse cx="235" cy="126" rx="18" ry="44" transform="rotate(61 235 126)"/><ellipse cx="600" cy="433" rx="22" ry="54" transform="rotate(38 600 433)"/><ellipse cx="560" cy="312" rx="21" ry="55" transform="rotate(-41 560 312)"/><ellipse cx="495" cy="196" rx="21" ry="49" transform="rotate(-48 495 196)"/>
+</g>
+<g fill="#f8eddf" stroke="#e1acb3" stroke-width="2" opacity=".95">
+<g transform="translate(105 295)"><circle r="17"/><circle cx="-15" cy="0" r="13"/><circle cx="15" cy="0" r="13"/><circle cy="-14" r="13"/><circle cy="14" r="13"/><circle r="7" fill="#c29d71"/></g>
+<g transform="translate(201 140) scale(.7)"><circle r="17"/><circle cx="-15" cy="0" r="13"/><circle cx="15" cy="0" r="13"/><circle cy="-14" r="13"/><circle cy="14" r="13"/><circle r="7" fill="#c29d71"/></g>
+<g transform="translate(543 292) scale(1.1)"><circle r="17"/><circle cx="-15" cy="0" r="13"/><circle cx="15" cy="0" r="13"/><circle cy="-14" r="13"/><circle cy="14" r="13"/><circle r="7" fill="#c29d71"/></g>
+<g transform="translate(465 167) scale(.75)"><circle r="17"/><circle cx="-15" cy="0" r="13"/><circle cx="15" cy="0" r="13"/><circle cy="-14" r="13"/><circle cy="14" r="13"/><circle r="7" fill="#c29d71"/></g>
+</g>
+<!-- bride silhouette -->
+<g transform="translate(0 45)">
+<path d="M292 515Q269 558 236 666L188 850H456L405 667Q369 550 351 512Z" fill="url(#dress)"/>
+<path d="M294 537Q255 572 225 659Q284 696 387 673Q361 590 355 536" fill="#f9eee6"/>
+<path d="M319 437Q287 438 290 498Q292 536 322 550Q347 532 350 503Q359 443 319 437Z" fill="#ae826e"/>
+<path d="M280 462Q273 431 296 407Q321 396 344 418Q365 438 354 475Q350 446 334 439Q306 452 282 448Z" fill="#5b4345"/>
+<path d="M293 414Q278 433 276 454Q267 475 287 495" fill="none" stroke="#654b4d" stroke-width="19"/>
+<path d="M281 456Q248 520 221 607Q265 589 300 551" fill="#fffaf7" opacity=".54"/>
+<path d="M348 465Q386 524 437 646Q400 613 362 558" fill="#fff9f6" opacity=".5"/>
+<path d="M301 405Q294 389 305 376Q319 360 334 380Q342 393 336 405" fill="#5b4345"/>
+<g fill="#f1cdd1"><circle cx="314" cy="393" r="10"/><circle cx="327" cy="387" r="7"/><circle cx="305" cy="384" r="6"/></g>
+</g>
+<!-- groom silhouette -->
+<g transform="translate(0 45)">
+<path d="M354 504L384 482Q419 489 442 549L464 850H326L325 580Z" fill="url(#suit)"/>
+<path d="M353 521L386 498L400 587L365 610Z" fill="#f7eee8"/>
+<path d="M374 527L390 517L390 593L374 603Z" fill="#836576"/>
+<path d="M382 413Q352 414 347 454L349 495Q358 519 380 522Q409 512 412 485L414 445Q402 413 382 413Z" fill="#aa7863"/>
+<path d="M349 447Q355 399 391 403Q430 404 420 461Q407 439 390 430Q363 439 349 447Z" fill="#44393d"/>
+<path d="M417 484Q428 542 463 591L482 578Q443 500 416 478" fill="#4d424b"/>
+</g>
+<path d="M0 799Q180 762 333 818T650 797V850H0" fill="#d5b1ad" opacity=".75"/>
+<g fill="#efe0db" opacity=".82"><circle cx="75" cy="690" r="7"/><circle cx="544" cy="653" r="6"/><circle cx="152" cy="514" r="4"/><circle cx="502" cy="439" r="8"/></g>
+</svg>

@@ -1,0 +1,130 @@
+/* Step 15: final polish and mobile couple framing. Load AFTER union-step14.css. */
+:root { --step-blush:#FFCED8; --step-plum:#80426E; --step-gold:#D9AD64; }
+
+/* Make first opening names deliberately short and graceful. */
+.opening-copy #open-title { letter-spacing:-.025em; }
+.opening-copy #open-title em {
+  font-family:'Great Vibes','Cormorant Garamond',Georgia,serif;
+  font-style:normal;
+  display:inline-block;
+  font-size:.70em !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+  vertical-align:middle;
+  margin:0 .13em;
+  color:#C28EAC !important;
+}
+/* Label is removed entirely, no invisible spacing in the portrait block. */
+.photo-demo-disclaimer { display:none !important; }
+
+/* Big, polished wedding rings form a visual bridge between their hands. */
+.story-union-section .union-scene { isolation:isolate; }
+.story-union-section .union-wedding-rings {
+  position:absolute;
+  z-index:8;
+  left:50%;
+  bottom:var(--union-contact-bottom,17%);
+  width:clamp(118px,14vw,190px);
+  aspect-ratio:1.25;
+  pointer-events:none;
+  transform:translate(-50%,50%) scale(.45);
+  opacity:0;
+  filter:drop-shadow(0 10px 22px rgba(128,66,110,.20));
+}
+.story-union-section .union-wedding-rings img {
+  display:block;
+  width:100%;height:100%;object-fit:contain;
+  filter:drop-shadow(0 0 14px rgba(253,226,157,.63));
+}
+.story-union-section .union-wedding-rings::before {
+  content:'';position:absolute;inset:27% 3% 15%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,250,227,.85),rgba(255,220,170,.38) 40%,transparent 72%);
+  filter:blur(8px);z-index:-1;
+}
+.story-union-section:not(.will-unite) .union-wedding-rings {
+  opacity:1;transform:translate(-50%,50%) scale(1);
+}
+.story-union-section.is-united .union-wedding-rings {
+  animation:step15-rings-enter 1100ms cubic-bezier(.19,1.45,.3,1) 1400ms forwards;
+}
+@keyframes step15-rings-enter {
+  0% { opacity:0;transform:translate(-50%,50%) scale(.35) rotate(-19deg); }
+  62% { opacity:1;transform:translate(-50%,50%) scale(1.1) rotate(5deg); }
+  100% { opacity:1;transform:translate(-50%,50%) scale(1) rotate(0deg); }
+}
+
+/* Additional details and closing motion; no-JS view stays fully visible. */
+body.js-reveal .details-section .premium-details-card,
+body.js-reveal .details-section .details-side-card {
+  opacity:0;transform:translateY(34px) scale(.975);
+  transition:opacity 900ms ease,transform 1100ms cubic-bezier(.2,.7,.22,1);
+}
+body.js-reveal .details-section.is-visible .premium-details-card,
+body.js-reveal .details-section.is-visible .details-side-card {
+  opacity:1;transform:translateY(0) scale(1);
+}
+body.js-reveal .details-section.is-visible .details-side-card {transition-delay:170ms;}
+body.js-reveal .closing-section .closing-copy-block,
+body.js-reveal .closing-section .closing-visual {
+  opacity:0;transform:translateY(30px);
+  transition:opacity 950ms ease,transform 1050ms cubic-bezier(.22,.65,.2,1);
+}
+body.js-reveal .closing-section.is-visible .closing-copy-block,
+body.js-reveal .closing-section.is-visible .closing-visual {opacity:1;transform:translateY(0);}
+body.js-reveal .closing-section.is-visible .closing-visual {transition-delay:180ms;}
+
+/* Linked brand credit works in both desktop and mobile footer. */
+.footer a { color:#FFF1F7; text-decoration:none; border-bottom:1px solid rgba(255,241,247,.40);
+  padding:4px 0 6px; transition:color .25s,border-color .25s; }
+.footer a:hover { color:#FFF5C9; border-color:#FFF5C9; }
+.footer a:focus-visible { outline:2px solid #FFF5C9; outline-offset:5px; }
+
+@media(max-width:700px){
+  /* 1714×918 source images include BOTH the figure and transparent spacing.
+     Use 110vw, not 100vw+112px, to prevent off-screen heads and bodies. */
+  .story-union-section .union-stage { min-height:clamp(550px,150vw,650px); }
+  .story-union-section .union-copy { padding:39px 16px 0; }
+  .story-union-section .union-copy h2 { margin:12px 0 18px; }
+  .story-union-section .union-copy .story-body { max-width:460px; }
+  .story-union-section .union-scene {
+    height:clamp(208px,65vw,286px);
+    bottom:32px;
+    overflow:visible;
+  }
+  .story-union-section .union-person {
+    width:min(110vw, calc(100vw + 42px)) !important;
+    max-width:none !important;
+    height:auto !important;
+    object-fit:contain !important;
+  }
+  .story-union-section .union-wedding-rings { width:clamp(76px,25vw,104px); }
+  .story-union-section .union-endnote { padding:10px 9px 25px; margin:0; }
+  .story-union-section .union-heart { opacity:0; }
+  .footer { align-items:center; flex-direction:column; text-align:center; row-gap:9px; line-height:1.6; }
+}
+@media(max-width:390px){
+  .story-union-section .union-stage { min-height:570px; }
+  .story-union-section .union-scene { height:clamp(208px,65vw,254px);bottom:28px; }
+  .story-union-section .union-copy .story-body {font-size:clamp(17px,4.7vw,19px)}
+}
+@media(max-width:340px){
+  .story-union-section .union-stage { min-height:560px; }
+  .story-union-section .union-copy h2 {font-size:34px}
+  .story-union-section .union-scene {height:210px;bottom:26px}
+  .story-union-section .union-wedding-rings {width:78px}
+}
+@media(prefers-reduced-motion:reduce){
+  .story-union-section .union-wedding-rings,
+  .story-union-section.is-united .union-wedding-rings {opacity:1;animation:none!important;transform:translate(-50%,50%) scale(1)!important;}
+  body.js-reveal .details-section .premium-details-card,
+  body.js-reveal .details-section .details-side-card,
+  body.js-reveal .closing-section .closing-copy-block,
+  body.js-reveal .closing-section .closing-visual {opacity:1!important;transform:none!important;transition:none!important;}
+  .details-floating-chip,.mini-memory-card,.closing-floating-card,.closing-orbit,
+  .closing-sparkles span,.closing-portrait-inner::after {animation:none!important}
+}
+
+/* The second mini card is an illustration, not a duplicate sample photo. */
+.mini-ring-card {width:100%;aspect-ratio:1.05/1;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0;background:radial-gradient(circle at 50% 36%,rgba(255,255,255,.96),rgba(255,216,229,.7) 63%,rgba(234,184,210,.6));overflow:hidden;}
+.mini-ring-card img {width:68% !important;height:68% !important;aspect-ratio:auto !important;object-fit:contain !important;filter:drop-shadow(0 8px 12px rgba(190,135,76,.14));}
+.mini-ring-card span {font:800 9px/1.1 var(--sans);letter-spacing:.17em;color:#955f7e;padding:0 8px 9px;text-align:center;}

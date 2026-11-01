@@ -1,0 +1,65 @@
+/* STEP 10 — SCROLL-REVEAL COUPLE MEETING */
+.story-union-section {
+  padding: 0 !important;
+  min-height: 0;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 56% 47% at 50% 23%, #fffdfd 0%, #fff3f7 58%, transparent 100%),
+              radial-gradient(ellipse at 0% 92%, #ffd3e0 0%, transparent 49%),
+              radial-gradient(ellipse at 100% 85%, #f5d4e5 0%, transparent 48%),
+              linear-gradient(130deg, #fff6fa, #ffe9f1) !important;
+  isolation: isolate;
+}
+.story-union-section::after{z-index:-1;pointer-events:none}
+.story-union-section .union-mist{position:absolute;pointer-events:none;z-index:0;width:38vw;height:38vw;border-radius:50%;filter:blur(45px);opacity:.55;animation:union-mist 9s ease-in-out infinite alternate}
+.union-mist-left{background:#ffd0de;left:-20%;top:20%}
+.union-mist-right{background:#e6bad5;right:-20%;bottom:0;animation-delay:-4s}
+.story-union-section .union-floral-left{left:-7%;top:-9%;width:clamp(210px,23vw,360px);opacity:.28;transform:rotate(172deg)}
+.story-union-section .union-floral-right{right:-7%;bottom:-9%;width:clamp(210px,23vw,360px);opacity:.24;transform:scaleX(-1) rotate(183deg)}
+.union-stage{position:relative;width:min(1240px,100%);margin:0 auto;min-height:760px;isolation:isolate}
+.union-copy{position:relative;z-index:5;max-width:690px;text-align:center;margin:0 auto;padding:80px 16px 0;pointer-events:none}
+.union-copy .section-flower{font-size:37px;margin:0 0 14px;color:#bb7f9f}
+.union-copy .eyebrow{font-size:11px;letter-spacing:.32em;color:#89506f;font-weight:800}
+.union-copy h2{font:500 clamp(52px,5.3vw,82px)/1.02 'Cormorant Garamond',Georgia,serif;color:#80426E;letter-spacing:-.028em;margin:18px 0 23px;text-shadow:0 5px 25px rgba(255,255,255,.72)}
+.union-copy h2 em{font-weight:500;color:#b56d96}
+.union-copy .story-body{font:italic 500 clamp(19px,1.7vw,24px)/1.42 'Cormorant Garamond',Georgia,serif;color:#70465e;max-width:580px;margin:0 auto;text-shadow:0 2px 12px #fff9}
+.union-gold-divider{display:flex;align-items:center;justify-content:center;gap:13px;margin-top:24px;color:#bf9258}
+.union-gold-divider span{width:62px;height:1px;background:linear-gradient(90deg,transparent,#cda57b,transparent)}
+.union-gold-divider b{font-size:25px;font-weight:400;line-height:1}
+.union-scene{position:absolute;inset:auto 0 0;height:590px;z-index:2;pointer-events:none;overflow:visible}
+.union-person{position:absolute;bottom:0;display:block;width:60%;height:auto;max-width:none;object-fit:contain;filter:drop-shadow(0 16px 13px rgba(128,66,110,.11));opacity:0;will-change:transform,opacity}
+.union-groom{left:-7%;transform:translate3d(-94%,0,0) rotate(-3deg)}
+.union-bride{right:-7%;transform:translate3d(94%,0,0) rotate(3deg)}
+.story-union-section.is-united .union-groom{opacity:1;transform:translate3d(1.6%,0,0) rotate(0deg);transition:transform 1900ms cubic-bezier(.17,.7,.22,1),opacity 520ms ease}
+.story-union-section.is-united .union-bride{opacity:1;transform:translate3d(-1.6%,0,0) rotate(0deg);transition:transform 1900ms cubic-bezier(.17,.7,.22,1),opacity 520ms ease}
+.union-touch-glow{position:absolute;z-index:4;bottom:15%;left:50%;transform:translate(-50%,0) scale(.24);width:160px;height:112px;border-radius:50%;opacity:0;background:radial-gradient(ellipse,rgba(255,241,186,.78),rgba(255,207,224,.44) 41%,transparent 72%);filter:blur(7px);mix-blend-mode:screen}
+.story-union-section.is-united .union-touch-glow{animation:union-glow 1400ms ease-out 1280ms forwards}
+.union-heart{position:absolute;bottom:20%;left:50%;z-index:5;font:28px Georgia,serif;color:#bd8c55;text-shadow:0 0 12px rgba(255,255,255,.8);opacity:0}
+.union-heart-one{transform:translate(-50%,20px)}
+.union-heart-two{transform:translate(-65px,30px);font-size:18px}
+.union-heart-three{transform:translate(53px,20px);font-size:17px}
+.story-union-section.is-united .union-heart{animation:union-sparkle 1500ms ease-out 1450ms forwards}
+.story-union-section.is-united .union-heart-two{animation-delay:1650ms}
+.story-union-section.is-united .union-heart-three{animation-delay:1770ms}
+.union-endnote{position:relative;z-index:5;margin:-2px 0 0;padding:0 12px 31px;text-align:center;color:#87546e;font:800 10px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.3em}
+@keyframes union-glow{0%{opacity:0;transform:translate(-50%,0) scale(.24)}50%{opacity:1;transform:translate(-50%,0) scale(1.1)}100%{opacity:.58;transform:translate(-50%,0) scale(.75)}}
+@keyframes union-sparkle{0%{opacity:0;translate:0 0;scale:.5}40%{opacity:.85;scale:1.1}100%{opacity:0;translate:0 -80px;scale:.7}}
+@keyframes union-mist{from{opacity:.35;transform:scale(1)}to{opacity:.6;transform:scale(1.15)}}
+@media(max-width:1000px){.union-stage{min-height:660px}.union-scene{height:490px}.union-copy{padding-top:75px}.union-copy h2{font-size:clamp(49px,5.5vw,68px)}}
+@media(max-width:700px){
+ .union-stage{min-height:685px}
+ .union-copy{padding:70px 22px 0}
+ .union-copy h2{font-size:clamp(45px,9.4vw,63px);line-height:1.02;margin:17px 0 20px}
+ .union-copy .story-body{font-size:21px;line-height:1.35}
+ .union-scene{height:clamp(230px,67vw,390px);bottom:32px}
+ .union-person{width:68%}
+ .union-groom{left:-12%}
+ .union-bride{right:-12%}
+ .union-touch-glow{bottom:13%;width:85px;height:75px}
+ .union-heart{bottom:15%}
+ .union-endnote{font-size:9px;letter-spacing:.15em;position:absolute;bottom:4px;left:0;right:0;padding:0 12px 19px}
+}
+@media(max-width:390px){.union-stage{min-height:640px}.union-copy h2{font-size:43px}.union-copy .story-body{font-size:19px}.union-scene{bottom:26px;height:235px}}
+@media(prefers-reduced-motion:reduce){.union-person,.story-union-section.is-united .union-person{transition:none!important;opacity:1!important;transform:none!important}.story-union-section.is-united .union-touch-glow,.story-union-section.is-united .union-heart{animation:none!important;opacity:0!important}}

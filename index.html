@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#80426E" />
+  <meta name="description" content="A beautifully animated wedding invitation. Open the envelope to celebrate a special day." />
+  <title>Wedding Invitation | Ceyviora Demo</title>
+  <link rel="icon" type="image/svg+xml" href="assets/floral-mark.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="opening-v5.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="hero-v7.css" />
+  <link rel="stylesheet" href="union-step10.css" />
+  <link rel="stylesheet" href="union-step11.css" />
+  <link rel="stylesheet" href="union-step12.css" />
+  <link rel="stylesheet" href="union-step14.css" />
+  <link rel="stylesheet" href="step15-polish.css" />
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="reunion-align.js"></script>
+</head>
+<body>
+  <audio id="bg-music" class="bg-music" preload="auto" loop>
+    <source src="assets/audio/wedding-vibe-loop.mp3" type="audio/mpeg" />
+    <source src="assets/audio/wedding-vibe-loop.wav" type="audio/wav" />
+  </audio>
+  <button class="music-toggle" id="music-toggle" type="button" aria-label="Pause background music" title="Background music">♫</button>
+  
+
+  <!-- STEP 03: cinematic gold / amethyst purple animated opening. -->
+  <div class="opening-screen" id="opening-screen" role="dialog" aria-modal="true" aria-labelledby="open-title">
+    <div class="opening-atmosphere" aria-hidden="true"></div>
+    <div class="opening-texture" aria-hidden="true"></div>
+    <img class="opening-bloom opening-bloom-left" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+    <img class="opening-bloom opening-bloom-right" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+    <!-- Royal background illustration + animated gold/flower layers -->
+    <div class="royal-lightbeams" aria-hidden="true"></div>
+    <div class="royal-curtain royal-curtain-left" aria-hidden="true"></div>
+    <div class="royal-curtain royal-curtain-right" aria-hidden="true"></div>
+    <div class="royal-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="royal-ribbons" aria-hidden="true"><span></span><span></span></div>
+    <img class="royal-bouquet royal-bouquet-left" src="assets/royal-bouquet.svg" alt="" aria-hidden="true" />
+    <img class="royal-bouquet royal-bouquet-right" src="assets/royal-bouquet.svg" alt="" aria-hidden="true" />
+    <div class="opening-border" aria-hidden="true"></div>
+    <img class="opening-filigree opening-filigree-left" src="assets/gold-filigree.svg" alt="" aria-hidden="true" />
+    <img class="opening-filigree opening-filigree-right" src="assets/gold-filigree.svg" alt="" aria-hidden="true" />
+    <div class="opening-sparkles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="opening-center">
+      <header class="opening-header">
+        <span class="opening-diamond" aria-hidden="true">✧</span>
+        <span class="opening-eyebrow" id="opening-eyebrow">A MOST SPECIAL CELEBRATION</span>
+        <span class="opening-header-rule" aria-hidden="true"></span>
+        <span class="opening-pretitle">THE WEDDING OF</span>
+      </header>
+
+      <div class="envelope-stage" aria-label="Animated wedding invitation envelope">
+        <div class="envelope-halo" aria-hidden="true"></div>
+        <div class="royal-halo-ring royal-halo-one" aria-hidden="true"></div>
+        <div class="royal-halo-ring royal-halo-two" aria-hidden="true"></div>
+        <div class="royal-halo-caption" aria-hidden="true">✦ &nbsp; WITH LOVE &nbsp; ✦</div>
+        <div class="stage-ornament stage-ornament-left" aria-hidden="true">✦</div>
+        <div class="stage-ornament stage-ornament-right" aria-hidden="true">✧</div>
+        <div class="envelope" aria-hidden="true">
+          <div class="envelope-back"></div>
+          <div class="envelope-letter">
+            <span class="letter-kicker">THE WEDDING OF</span>
+            <span class="letter-monogram" data-bind="monogram">H &amp; U</span>
+            <span class="letter-ornament">✦</span>
+            <span class="letter-date" data-bind="openingDate">02 APRIL 2029</span>
+          </div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-left"></div>
+          <div class="envelope-right"></div>
+          <div class="envelope-front"></div>
+          <div class="wax-seal"><span data-bind="monogram">H &amp; U</span></div>
+        </div>
+      </div>
+
+      <div class="opening-copy">
+        <h1 id="open-title"><span data-bind="openingNameOne">Udara</span> <em>&amp;</em> <span data-bind="openingNameTwo">Hiruni</span></h1>
+        <p class="opening-subheading">An invitation to forever</p>
+        <p class="opening-meta"><span data-bind="openingDate">02 APRIL 2029</span><span class="meta-star" aria-hidden="true">✦</span><span data-bind="venue">Shangri-La Colombo</span></p>
+      </div>
+      <button class="button button-primary opening-button" id="open-invitation" type="button" aria-label="Open Udara and Hiruni wedding invitation">
+        <span>OPEN THE INVITATION</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
+      </button>
+      <div class="opening-caption">A BEAUTIFUL BEGINNING <span aria-hidden="true">✦</span> FOREVER AWAITS</div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- STEP 07: Luxury editorial wedding hero. Add an actual photo at assets/photos/couple-hero.jpg. -->
+    <section class="hero wedding-hero" aria-labelledby="couple-heading">
+      <div class="hero-texture" aria-hidden="true"></div>
+      <div class="hero-ambient hero-ambient-left" aria-hidden="true"></div>
+      <div class="hero-ambient hero-ambient-right" aria-hidden="true"></div>
+      <img class="hero-corner-bloom hero-corner-bloom-left" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <img class="hero-corner-bloom hero-corner-bloom-right" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <div class="hero-light-trail hero-light-trail-one" aria-hidden="true"></div>
+      <div class="hero-light-trail hero-light-trail-two" aria-hidden="true"></div>
+      <div class="hero-floating-petals" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="topmark"><span class="topmark-star" aria-hidden="true">✧</span> A CELEBRATION OF LOVE <span class="topmark-star" aria-hidden="true">✧</span></div>
+      <div class="hero-inner">
+        <div class="hero-copy" data-reveal>
+          <p class="hero-overline"><span></span> TOGETHER WITH OUR FAMILIES <span></span></p>
+          <p class="hero-pretitle">The Wedding of</p>
+          <h2 id="couple-heading" class="couple-heading"><span data-bind="groomFullName">Udara Dilshan</span><small class="name-ampersand name-to">TO</small><span data-bind="brideFullName">Hiruni Nawoda</span></h2>
+          <div class="hero-flourish" aria-hidden="true"><span></span><svg width="60" height="23" viewBox="0 0 60 23"><path d="M1 11c11-17 21 18 29 0 8-18 18 17 29 0" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="11" r="2.5" fill="currentColor"/></svg><span></span></div>
+          <p class="hero-invite" data-bind="invitationLine">Together with our families, we joyfully invite you to celebrate our wedding day.</p>
+          <div class="hero-date-card"><span class="date-symbol" aria-hidden="true">✧</span><span data-bind="displayDate">MONDAY · 02 APRIL 2029</span><span class="date-symbol" aria-hidden="true">✧</span></div>
+          <div class="hero-event-mini">
+            <div><small>CEREMONY</small><strong data-bind="ceremonyTime">9:00 AM</strong></div>
+            <span class="mini-separator"></span>
+            <div><small>RECEPTION</small><strong data-bind="celebrationTime">11:00 AM</strong></div>
+          </div>
+          <p class="hero-venue"><span aria-hidden="true">⌖</span> <span data-bind="venue">Shangri-La Colombo</span> · <span data-bind="location">Colombo, Sri Lanka</span></p>
+          <a class="hero-discover" href="#the-details"><span>DISCOVER OUR DAY</span><span class="discover-arrow" aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="portrait-halo" aria-hidden="true"></div>
+          <div class="portrait-orbit portrait-orbit-one" aria-hidden="true"></div>
+          <div class="portrait-orbit portrait-orbit-two" aria-hidden="true"></div>
+          <div class="portrait-frame">
+            <div class="portrait-photo-wrap">
+              <img class="hero-couple-photo" src="assets/photos/couple-hero.jpg" alt="Wedding couple portrait of Hiruni Nawoda and Udara Dilshan" onerror="this.onerror=null;this.src='assets/photos/demo-couple.jpg';this.alt='Illustrative demo couple photo; replace with the actual wedding couple portrait';this.closest('.hero-visual').classList.add('using-demo-photo');" />
+              <span class="portrait-shine" aria-hidden="true"></span>
+            </div>
+          </div>
+          <img class="portrait-floral portrait-floral-top" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+          <img class="portrait-floral portrait-floral-bottom" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+          <div class="portrait-monogram" aria-hidden="true"><span>U</span><span class="monogram-and">&amp;</span><span>H</span></div>
+          <div class="portrait-tag portrait-tag-top"><span aria-hidden="true">✧</span> A DAY TO REMEMBER</div>
+          <div class="portrait-tag portrait-tag-bottom">FOREVER &amp; ALWAYS <span aria-hidden="true">✧</span></div>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></div>
+    </section>
+
+    <!-- STEP 12: Automatic hand-alignment from transparent PNG assets. -->
+    <section class="story-section story-union-section" data-reveal id="the-details" aria-labelledby="story-heading">
+      <div class="union-mist union-mist-left" aria-hidden="true"></div>
+      <div class="union-mist union-mist-right" aria-hidden="true"></div>
+      <img class="section-floral union-floral-left" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <img class="section-floral union-floral-right" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+
+      <div class="union-stage" aria-label="Wedding couple meeting and holding hands">
+        <div class="union-copy">
+          <div class="section-flower" aria-hidden="true">✻</div>
+          <p class="eyebrow">WITH ALL OUR HEARTS</p>
+          <h2 id="story-heading">A day filled with<br /><em>love, elegance &amp; joy.</em></h2>
+          <p class="story-body" data-bind="message">Every detail of this day is wrapped in love, joy, and the promise of forever. We would be honored to celebrate with you.</p>
+          <div class="union-gold-divider" aria-hidden="true"><span></span><b>✧</b><span></span></div>
+        </div>
+
+        <div class="union-scene" aria-hidden="true">
+          <img class="union-person union-groom" src="assets/couple-motion/groom-clean.png" alt="" loading="eager" decoding="async" />
+          <img class="union-person union-bride" src="assets/couple-motion/bride-clean.png" alt="" loading="eager" decoding="async" />
+          <div class="union-touch-glow"></div>
+          <div class="union-wedding-rings" aria-hidden="true"><img src="assets/ceremony-rings.svg" alt="" /></div>
+          <div class="union-join-ring" aria-hidden="true"></div>
+          <span class="union-heart union-heart-one">✧</span>
+          <span class="union-heart union-heart-two">✦</span>
+          <span class="union-heart union-heart-three">✧</span>
+        </div>
+      </div>
+      <p class="union-endnote">TWO HEARTS · ONE BEAUTIFUL FOREVER</p>
+    </section>
+
+    <section class="details-section" data-reveal aria-labelledby="details-heading">
+      <img class="section-floral section-floral-left section-floral-soft" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <img class="section-floral section-floral-right section-floral-soft" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <div class="details-shell">
+        <div class="details-card premium-details-card">
+          <div class="details-card-glow" aria-hidden="true"></div>
+          <div class="details-header-ornament">
+            <span class="details-line"></span>
+            <div class="details-ring-badge"><img src="assets/wedding-rings.svg" alt="" aria-hidden="true" /></div>
+            <span class="details-line"></span>
+          </div>
+          <p class="eyebrow">MARK YOUR CALENDAR</p>
+          <h2 id="details-heading">Wedding Details</h2>
+          <p class="card-date card-date-premium" data-bind="displayDate">MONDAY · 02 APRIL 2029</p>
+          <div class="event-grid premium-grid">
+            <div class="event-item premium-event-item">
+              <span class="event-icon ring-illustration" aria-hidden="true"><img src="assets/wedding-rings.svg" alt="" /></span>
+              <span class="event-kicker">CEREMONY</span>
+              <strong data-bind="ceremonyTime">9:00 AM</strong>
+              <em>Exchange of vows</em>
+            </div>
+            <div class="event-divider premium-divider" aria-hidden="true"></div>
+            <div class="event-item premium-event-item">
+              <span class="event-icon spark-illustration" aria-hidden="true">✦</span>
+              <span class="event-kicker">RECEPTION</span>
+              <strong data-bind="celebrationTime">11:00 AM</strong>
+              <em>Celebration begins</em>
+            </div>
+          </div>
+          <div class="location-box premium-location-box">
+            <span class="eyebrow">VENUE & LOCATION</span>
+            <strong data-bind="venue">Shangri-La Colombo</strong>
+            <span data-bind="location">Colombo, Sri Lanka</span>
+          </div>
+          <div class="details-actions">
+            <button class="button button-outline" id="save-date" type="button">Save the date <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="card-note">A calendar event will download to your device.</p>
+        </div>
+        <aside class="details-side-card" aria-label="Wedding portrait preview">
+          <div class="details-side-atmosphere" aria-hidden="true"></div>
+          <div class="details-floating-chip chip-date" aria-hidden="true">02 APR 2029</div>
+          <div class="details-floating-chip chip-love" aria-hidden="true">WITH LOVE ✦</div>
+          <div class="details-photo-frame">
+            <span class="details-photo-glow" aria-hidden="true"></span>
+            <img class="details-side-photo" src="assets/photos/couple-hero.jpg" alt="Wedding portrait of Udara Dilshan and Hiruni Nawoda" onerror="this.onerror=null;this.src='assets/photos/demo-couple.jpg';" />
+          </div>
+          <div class="details-side-copy">
+            <p class="eyebrow">FOREVER STARTS HERE</p>
+            <h3>Celebrate this beautiful day with us</h3>
+            <p>Join us for a heartfelt ceremony and an elegant wedding reception in a luxurious setting.</p>
+          </div>
+          <div class="details-mini-gallery" aria-hidden="true">
+            <figure class="mini-memory-card memory-one"><img src="assets/photos/couple-hero.jpg" alt="" onerror="this.onerror=null;this.src='assets/photos/demo-couple.jpg';" /></figure>
+            <figure class="mini-memory-card memory-two"><div class="mini-ring-card"><img src="assets/ceremony-rings.svg" alt="" /><span>FOREVER &amp; ALWAYS</span></div></figure>
+          </div>
+          <div class="details-side-footer" aria-hidden="true">
+            <span>Luxury celebration</span>
+            <span>Romantic moments</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="closing-section" data-reveal aria-labelledby="closing-heading">
+      <img class="section-floral section-floral-left section-floral-soft closing-floral-left" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <img class="section-floral section-floral-right section-floral-soft closing-floral-right" src="assets/hero-florals.svg" alt="" aria-hidden="true" />
+      <div class="closing-sparkles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="closing-shell">
+        <div class="closing-copy-block">
+          <p class="eyebrow">THE BEST IS YET TO COME</p>
+          <h2 id="closing-heading">We can't wait<br /><em>to celebrate with you.</em></h2>
+          <div class="closing-names"><span data-bind="partnerOne">Udara Dilshan</span> <span>to</span> <span data-bind="partnerTwo">Hiruni Nawoda</span></div>
+          <p class="closing-note">Made for joyful moments, warm memories, and all the love in between.</p>
+          <div class="closing-promise-row" aria-hidden="true">
+            <span>02 APRIL 2029</span>
+            <span>SHANGRI-LA COLOMBO</span>
+          </div>
+        </div>
+        <div class="closing-visual" aria-label="Romantic wedding closing visual">
+          <div class="closing-orbit closing-orbit-one" aria-hidden="true"></div>
+          <div class="closing-orbit closing-orbit-two" aria-hidden="true"></div>
+          <div class="closing-portrait-card">
+            <div class="closing-portrait-inner">
+              <img class="closing-photo" src="assets/photos/couple-hero.jpg" alt="Wedding couple portrait of Udara Dilshan and Hiruni Nawoda" onerror="this.onerror=null;this.src='assets/photos/demo-couple.jpg';" />
+            </div>
+            <div class="closing-tag closing-tag-top">ROMANTIC MOMENTS ✦</div>
+            <div class="closing-tag closing-tag-bottom">FOREVER BEGINS HERE</div>
+          </div>
+          <div class="closing-floating-card floating-date">
+            <small>CEREMONY</small>
+            <strong data-bind="ceremonyTime">9:00 AM</strong>
+          </div>
+          <div class="closing-floating-card floating-place">
+            <small>VENUE</small>
+            <strong data-bind="venue">Shangri-La Colombo</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><span>AN INVITATION TO REMEMBER</span><a href="https://www.facebook.com/CeyvioraDigitalSolutions" target="_blank" rel="noopener noreferrer" aria-label="Visit Ceyviora Digital Solutions on Facebook">Crafted by <span data-bind="footerBrand">Ceyviora Digital Solutions</span> <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

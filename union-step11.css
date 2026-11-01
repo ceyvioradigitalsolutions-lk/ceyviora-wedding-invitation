@@ -1,0 +1,97 @@
+/* CEYVIORA STEP 11 — corrected responsive reunion image alignment */
+.story-union-section {
+  background:
+    radial-gradient(ellipse 45% 45% at 50% 32%,rgba(255,255,255,.89),transparent 74%),
+    radial-gradient(ellipse at 5% 90%,rgba(255,206,216,.58),transparent 52%),
+    radial-gradient(ellipse at 98% 80%,rgba(229,188,211,.45),transparent 51%),
+    linear-gradient(140deg,#fff9fb,#ffebf3 70%,#fff5f8) !important;
+}
+.story-union-section .union-stage{width:100%;max-width:1440px;min-height:790px;margin-inline:auto;position:relative;}
+.story-union-section .union-copy{position:relative;z-index:6;max-width:760px;padding:74px 20px 0;}
+.story-union-section .union-copy h2{font-size:clamp(48px,5vw,72px)}
+.story-union-section .union-scene{
+  position:absolute;left:0;right:0;bottom:6px;height:clamp(480px,51vw,770px);
+  overflow:hidden;z-index:2;pointer-events:none;
+}
+.story-union-section .union-person{
+  position:absolute;bottom:0;left:50%;right:auto;
+  width:100%;height:auto;max-width:none;
+  display:block;object-fit:contain;object-position:center bottom;
+  filter:drop-shadow(0 13px 22px rgba(128,66,110,.09));
+  transform-origin:center bottom;
+  transition:none;
+  will-change:transform,opacity;
+  opacity:1;
+}
+/* Both full-canvas images share the exact same coordinate system. */
+.story-union-section.will-unite .union-groom{opacity:0;transform:translate3d(calc(-50% - 115vw),0,0)}
+.story-union-section.will-unite .union-bride{opacity:0;transform:translate3d(calc(-50% + 115vw),0,0)}
+.story-union-section:not(.will-unite) .union-groom{transform:translate3d(calc(-50% + 5px),0,0)}
+.story-union-section:not(.will-unite) .union-bride{transform:translate3d(calc(-50% - 46px),0,0)}
+.story-union-section.will-unite.is-united .union-groom{
+  opacity:1;transform:translate3d(calc(-50% + 5px),0,0);
+  transition:transform 1900ms cubic-bezier(.16,.8,.2,1),opacity 480ms ease-out;
+}
+.story-union-section.will-unite.is-united .union-bride{
+  opacity:1;transform:translate3d(calc(-50% - 46px),0,0);
+  transition:transform 1900ms cubic-bezier(.16,.8,.2,1),opacity 480ms ease-out;
+}
+.story-union-section .union-touch-glow{bottom:17%;width:120px;height:80px;left:50%;z-index:4;filter:blur(11px)}
+.story-union-section .union-join-ring{
+  position:absolute;z-index:4;bottom:14.5%;left:50%;width:116px;height:76px;
+  transform:translateX(-50%) scale(.2);
+  border:1px solid rgba(235,191,121,.52);border-radius:50%;
+  box-shadow:0 0 22px 7px rgba(255,232,192,.23);opacity:0;
+  pointer-events:none;
+}
+.story-union-section.is-united .union-join-ring{animation:union-ring-reveal 1700ms ease 1300ms forwards}
+.story-union-section .union-heart{bottom:20%}
+.story-union-section .union-endnote{position:relative;margin:0;padding:16px 12px 26px;z-index:6;text-align:center}
+@keyframes union-ring-reveal{
+  0%{opacity:0;transform:translateX(-50%) scale(.35)}
+  40%{opacity:.9;transform:translateX(-50%) scale(1.1)}
+  100%{opacity:.35;transform:translateX(-50%) scale(.85)}
+}
+@media(max-width:960px){
+  .story-union-section .union-stage{min-height:680px}
+  .story-union-section .union-scene{height:clamp(430px,61vw,650px)}
+  .story-union-section .union-copy{padding-top:64px}
+}
+@media(max-width:700px){
+  .story-union-section .union-stage{min-height:685px}
+  .story-union-section .union-copy{padding:54px 17px 0}
+  .story-union-section .union-copy h2{font-size:clamp(37px,9vw,52px);line-height:1.05;margin:12px 0 20px}
+  .story-union-section .union-copy .story-body{font-size:clamp(17px,4.4vw,21px);line-height:1.35;max-width:540px}
+  .story-union-section .union-copy .eyebrow{letter-spacing:.24em;font-size:10px}
+  .story-union-section .union-scene{height:305px;bottom:12px;overflow:hidden}
+  .story-union-section .union-person{width:calc(100vw + 108px);max-width:none}
+  .story-union-section.will-unite.is-united .union-groom,
+  .story-union-section:not(.will-unite) .union-groom{transform:translate3d(calc(-50% + 3px),0,0)}
+  .story-union-section.will-unite.is-united .union-bride,
+  .story-union-section:not(.will-unite) .union-bride{transform:translate3d(calc(-50% - 21px),0,0)}
+  .story-union-section .union-touch-glow{bottom:15%;width:72px;height:56px}
+  .story-union-section .union-join-ring{bottom:13%;width:70px;height:50px}
+  .story-union-section .union-heart{bottom:19%}
+  .story-union-section .union-endnote{padding:11px 10px 24px;font-size:8px;letter-spacing:.14em;position:relative;z-index:6}
+}
+@media(max-width:390px){
+  .story-union-section .union-stage{min-height:650px}
+  .story-union-section .union-copy{padding-top:42px}
+  .story-union-section .union-copy h2{font-size:clamp(34px,9.6vw,40px)}
+  .story-union-section .union-copy .story-body{font-size:17px}
+  .story-union-section .union-scene{height:275px;bottom:8px}
+}
+@media(max-width:340px){
+  .story-union-section .union-stage{min-height:635px}
+  .story-union-section .union-scene{height:255px}
+  .story-union-section .union-copy h2{font-size:33px}
+}
+@media(prefers-reduced-motion:reduce){
+  .story-union-section.will-unite .union-person,
+  .story-union-section.will-unite.is-united .union-person{
+    opacity:1!important;transition:none!important;
+  }
+  .story-union-section.will-unite .union-groom{transform:translate3d(calc(-50% + 5px),0,0)!important}
+  .story-union-section.will-unite .union-bride{transform:translate3d(calc(-50% - 46px),0,0)!important}
+  .story-union-section .union-touch-glow,.story-union-section .union-heart,.story-union-section .union-join-ring{animation:none!important;opacity:0!important}
+}
